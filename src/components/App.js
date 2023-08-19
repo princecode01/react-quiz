@@ -85,7 +85,7 @@ function App() {
   const questionsNum = questions.length;
 
   useEffect(() => {
-    fetch("https://localhost:9000/questions")
+    fetch("https://my-json-server.typicode.com/princecode01/react-quiz-back/questions")
       .then((res) => res.json())
       .then((data) => dispatch({ type: "dataReceived", payload: data }))
       .catch(() => dispatch({ type: "dataFailed" }));
